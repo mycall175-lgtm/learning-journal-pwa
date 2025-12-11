@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6366f1">
+    <title>Learning Journal - About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+</head>
+<body>
+    <!-- Navigation bar (Lab 2: HTML/CSS only, will be enhanced with JS in Lab 3) -->
+    <nav id="main-nav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/journal">Journal</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/about" class="active">About</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <header class="page-header">
+            <h1>About This Learning Journal</h1>
+        </header>
+
+        <!-- Student Information Card -->
+        <section class="student-info-section">
+            <div class="student-info-card">
+                <div class="student-id-display">
+                    <span class="student-label">Student ID</span>
+                    <span class="student-id-large">2321764</span>
+                </div>
+                <div class="student-details">
+                    <p><strong>Name:</strong> Mykal Yadave</p>
+                    <p><strong>Module:</strong> Mobile Application Development</p>
+                    <p><strong>Project:</strong> Learning Journal PWA</p>
+                    <p><strong>Labs Completed:</strong> Lab 2 - Lab 7</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-content">
+            <div class="about-card collapsible-section">
+                <h2 class="collapsible-header">
+                    <span>Purpose</span>
+                    <span class="toggle-icon">▼</span>
+                </h2>
+                <div class="collapsible-content">
+                    <p>This Learning Journal is a Progressive Web App (PWA) designed to help you track and reflect on your learning journey. It combines frontend and backend technologies to create a seamless experience.</p>
+                </div>
+            </div>
+
+            <div class="about-card collapsible-section">
+                <h2 class="collapsible-header">
+                    <span>Features</span>
+                    <span class="toggle-icon">▼</span>
+                </h2>
+                <div class="collapsible-content">
+                    <ul>
+                        <li>📝 Create and manage journal entries</li>
+                        <li>💾 Local storage for offline access</li>
+                        <li>🌐 Third-party API integrations</li>
+                        <li>📱 Mobile-first responsive design</li>
+                        <li>🔧 Flask backend with RESTful API</li>
+                        <li>⚡ Progressive Web App capabilities</li>
+                        <li>🌙 Dark/Light theme support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="about-card collapsible-section">
+                <h2 class="collapsible-header">
+                    <span>Technologies Used</span>
+                    <span class="toggle-icon">▼</span>
+                </h2>
+                <div class="collapsible-content">
+                    <ul>
+                        <li><strong>Frontend:</strong> HTML5, CSS3, Vanilla JavaScript</li>
+                        <li><strong>Backend:</strong> Python, Flask</li>
+                        <li><strong>Storage:</strong> JSON files, localStorage</li>
+                        <li><strong>APIs:</strong> Fetch API, Browser APIs, Third-party APIs</li>
+                        <li><strong>PWA:</strong> Service Worker, Web App Manifest</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="about-card collapsible-section">
+                <h2 class="collapsible-header">
+                    <span>Lab Requirements</span>
+                    <span class="toggle-icon">▼</span>
+                </h2>
+                <div class="collapsible-content">
+                    <p>This project fulfills requirements from Lab 2 through Lab 7:</p>
+                    <ul>
+                        <li><strong>Lab 2:</strong> HTML/CSS fundamentals with responsive design</li>
+                        <li><strong>Lab 3:</strong> JavaScript DOM manipulation</li>
+                        <li><strong>Lab 4:</strong> Storage API, Browser API, Third-party API</li>
+                        <li><strong>Lab 5:</strong> Python/JSON backend</li>
+                        <li><strong>Lab 6:</strong> Flask backend with CRUD operations</li>
+                        <li><strong>Lab 7:</strong> Progressive Web App features</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Learning Journal PWA | Mykal Yadave | Student ID: 2321764</p>
+    </footer>
+
+    <!-- JavaScript files -->
+    <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/storage.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/browser.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/thirdparty.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/collapsible.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/offline-handler.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/pwa.js') }}"></script>
+</body>
+</html>
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6366f1">
+    <title>Learning Journal - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+</head>
+<body>
+    <!-- Navigation bar (Lab 2: HTML/CSS only, will be enhanced with JS in Lab 3) -->
+    <nav id="main-nav">
+        <ul>
+            <li><a href="/" class="active">Home</a></li>
+            <li><a href="/journal">Journal</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <!-- Profile Section -->
+        <section class="profile-section">
+            <div class="profile-card">
+                <div class="profile-image-container">
+                    <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Profile Picture" class="profile-image" onerror="this.src='{{ url_for('static', filename='images/profile-placeholder.png') }}'">
+                    <div class="profile-status"></div>
+                </div>
+                <div class="profile-info">
+                    <h2 class="profile-name">Mykal Yadave</h2>
+                    <p class="profile-id">Student ID: <span class="id-number">2321764</span></p>
+                    <p class="profile-role">Mobile Application Development</p>
+                    <div class="profile-badges">
+                        <span class="badge badge-primary">PWA</span>
+                        <span class="badge badge-success">Flask</span>
+                        <span class="badge badge-info">Student</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <header class="hero">
+            <h1>Welcome to My Learning Journal</h1>
+            <p class="subtitle">Track your learning journey, reflect on experiences, and grow</p>
+            <p class="intro-text">This Learning Journal PWA documents my weekly learning journey through the Mobile Application Development module (FGCT6021), showcasing projects, reflections, and professional growth as a BSc (Hons) Computer Science student at the School of Games and Creative Technology.</p>
+            <!-- Live Date Display (Lab 3) -->
+            <div class="home-datetime">
+                <p id="home-datetime"></p>
+            </div>
+        </header>
+
+        <section class="features">
+            <div class="feature-card">
+                <h2>📝 Journal Entries</h2>
+                <p>Record your daily learning experiences and reflections</p>
+                <a href="/journal" class="btn">View Journal</a>
+            </div>
+
+            <div class="feature-card">
+                <h2>📚 Projects</h2>
+                <p>Showcase your projects and achievements</p>
+                <a href="/projects" class="btn">View Projects</a>
+            </div>
+
+            <div class="feature-card">
+                <h2>ℹ️ About</h2>
+                <p>Learn more about this learning journal</p>
+                <a href="/about" class="btn">About</a>
+            </div>
+        </section>
+
+        <section class="stats" id="stats-section">
+            <h2>Quick Stats</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" id="total-entries">0</span>
+                    <span class="stat-label">Total Entries</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="this-week">0</span>
+                    <span class="stat-label">This Week</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Learning Journal PWA | Mykal Yadave | Student ID: 2321764</p>
+    </footer>
+
+    <!-- JavaScript files (loaded in order) -->
+    <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/storage.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/browser.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/thirdparty.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/json-loader.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/offline-handler.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/journal.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/pwa.js') }}"></script>
+</body>
+</html>
+

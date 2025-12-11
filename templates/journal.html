@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6366f1">
+    <title>Learning Journal - Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+</head>
+<body>
+    <!-- Navigation bar (Lab 2: HTML/CSS only, will be enhanced with JS in Lab 3) -->
+    <nav id="main-nav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/journal" class="active">Journal</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <header class="page-header">
+            <h1>My Learning Journal</h1>
+            <p class="subtitle">Reflect on your learning experiences</p>
+        </header>
+
+        <!-- Theme switcher (Lab 3) -->
+        <div class="theme-switcher">
+            <button id="theme-toggle" class="btn-secondary">🌙 Toggle Theme</button>
+        </div>
+
+        <!-- Date/Time display (Lab 3) -->
+        <div class="datetime-display">
+            <p id="current-datetime"></p>
+        </div>
+
+        <!-- Entry form -->
+        <section class="entry-form-section">
+            <h2>Add New Entry</h2>
+            <form id="entry-form" class="entry-form">
+                <div class="form-group">
+                    <label for="entry-date">Date:</label>
+                    <input type="date" id="entry-date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="entry-title">Title:</label>
+                    <input type="text" id="entry-title" name="title" placeholder="What did you learn today?" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="entry-content">Reflection:</label>
+                    <textarea id="entry-content" name="content" rows="6" placeholder="Share your thoughts and learning experiences..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="entry-tags">Tags (comma-separated):</label>
+                    <input type="text" id="entry-tags" name="tags" placeholder="e.g., JavaScript, Flask, PWA">
+                </div>
+
+                <button type="submit" class="btn">Save Entry</button>
+            </form>
+        </section>
+
+        <!-- Filter section (Lab 5) -->
+        <section class="filter-section">
+            <h2>Filter Entries</h2>
+            <div class="filter-controls">
+                <input type="text" id="search-input" placeholder="Search entries..." class="search-input">
+                <select id="tag-filter" class="tag-filter">
+                    <option value="">All Tags</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Entries display -->
+        <section class="entries-section">
+            <h2>Journal Entries</h2>
+            <div id="entries-container" class="entries-container">
+                <p class="loading">Loading entries...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Learning Journal PWA | Mykal Yadave | Student ID: 2321764</p>
+    </footer>
+
+    <!-- JavaScript files -->
+    <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/storage.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/browser.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/thirdparty.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/json-loader.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/offline-handler.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/journal.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/pwa.js') }}"></script>
+</body>
+</html>
+

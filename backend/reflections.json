@@ -1,0 +1,25 @@
+[
+    {
+        "id": 1,
+        "date": "2025-01-10",
+        "title": "Getting Started with PWA Development",
+        "content": "Today I learned about Progressive Web Apps and how they combine the best of web and mobile applications. PWAs can work offline, be installed on devices, and provide a native app-like experience.",
+        "tags": [
+            "PWA",
+            "Web Development",
+            "JavaScript"
+        ]
+    },
+    {
+        "id": 2,
+        "date": "2025-01-11",
+        "title": "Flask Backend Implementation",
+        "content": "Implemented a Flask backend with RESTful API endpoints for CRUD operations. Learned about Flask routes, JSON handling, and file-based data storage.",
+        "tags": [
+            "Flask",
+            "Python",
+            "Backend",
+            "API"
+        ]
+    }
+]

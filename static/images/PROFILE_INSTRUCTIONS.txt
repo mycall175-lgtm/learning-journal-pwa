@@ -1,0 +1,19 @@
+PROFILE PICTURE INSTRUCTIONS
+============================
+
+To add your profile picture:
+
+1. Place your profile image in this folder (static/images/)
+2. Name it exactly: "profile.jpg" (or "profile.png" if it's a PNG file)
+3. Recommended size: 300x300 pixels or larger (square image works best)
+4. Supported formats: JPG, JPEG, PNG
+
+The app will automatically display your picture in the profile section on the home page.
+
+If the image is not found, a placeholder will be shown.
+
+Your Student ID (2321764) and Name (Mykal Yadave) are already displayed in:
+- Home page profile section
+- About page student info card
+- Footer on all pages
+
